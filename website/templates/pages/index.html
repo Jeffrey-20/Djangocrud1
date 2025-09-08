@@ -2,10 +2,17 @@
 
     {% block content %}
 
-    <h1>Goodbye world</h1>
+    <h1>Goodbye {{user}}</h1>
     <p>I did my best, but the world turned it's back on me.</p>
     
     <a href="{% url 'login' %}">Login</a>  
+
+    <br>
+
+    <a href="{% url 'register' %}">Register an account</a>
+
+    <br>
+     <a href="{% url 'logout' %}">Logout</a>
     
     {% endblock %}
 
