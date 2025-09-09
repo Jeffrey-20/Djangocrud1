@@ -15,14 +15,15 @@
     
     <form  method = "POST">
         {% csrf_token %}
-        {{login_form}}
+        {{form|crispy}}
         <br>
-        <button type = "submit" class = "btn btn-primary w-100 btn-block p-2">Login</button>
+        <button type = "submit" class = "btn btn-primary w-100 btn-block p-2">Login 
+    <a href="{% url 'login' %}">&nbsp; <i class="fa fa-key" aria-hidden="true"></i></button>
 
     </form>
           
        
-                <p>Don't have an account? </p> <a href="{% url 'register' %}">Register</a>
+                <p>Don't have an account? </p> <a href="{% url 'register' %}">Register &nbsp; <i class="fa fa-user-plus" aria-hidden="true"></i></a>
 
     </body>
 {% endblock %}
